@@ -135,4 +135,19 @@ exists, the student's name is not empty or contain any special characters.
               "student": "kalam"
             }
             ```
+- http://localhost:8000/api/v1/enrollments/{enrollment_id} (GET)
+- http://localhost:8000/api/v1/enrollments/{enrollment_id} (PUT, PATCH)
+    - `Update Enrollment`: update the enrollment.
+        - `Request Body`: 
+            ```json
+            {
+              "course": 1,
+              "student": "kalam"
+            }
+            ```
+          
+- http://localhost:8000/api/v1/enrollments/{enrollment_id} (DELETE)
+
+
+
 
