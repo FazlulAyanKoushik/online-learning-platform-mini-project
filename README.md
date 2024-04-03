@@ -108,7 +108,7 @@ python manage.py runserver
 - http://localhost:8000/api/v1/courses/{course_id} (GET)
     - `Get Course`: Get a course by id.
 - http://localhost:8000/api/v1/courses/{course_id} (PUT, PATCH)
-    - `Update Course`: Only Admin users can update a course.
+    - `Update Course`: Only Admin users can update a course by id.
         - `Request Body`: 
             ```json
             {
@@ -120,7 +120,7 @@ python manage.py runserver
             }
             ```
 - http://localhost:8000/api/v1/courses/{course_id} (DELETE)
-    - `Delete Course`: Only Admin users can delete a course.
+    - `Delete Course`: Only Admin users can delete a course by id.
 
 ### Enrollments API
 - http://localhost:8000/api/v1/enrollments (GET)
@@ -149,6 +149,7 @@ exists, the student's name is not empty or contain any special characters.
             ```
           
 - http://localhost:8000/api/v1/enrollments/{enrollment_id} (DELETE)
+    - `Delete Enrollment`: Delete an enrollment by id.
 
 
 
