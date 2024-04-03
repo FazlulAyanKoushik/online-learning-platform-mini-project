@@ -81,14 +81,58 @@ python manage.py runserver
         }
         ```
 - http://localhost:8000/api/v1/token (POST)
-    - `Login`: Obtain a token for a user.
+  - `Login`: Obtain a token for a user.
+    - `Request Body`: 
+        ```json
+        {
+          "username": "kalam",
+          "password": "123456"
+        }
+        ```
+### Courses API
+- http://localhost:8000/api/v1/courses (GET)
+    - `Get All Courses`: Get all courses.
+
+- http://localhost:8000/api/v1/courses (POST)
+  - `Create Course`: Only Admin users can create a course.
+    - `Request Body`: 
+        ```json
+      {
+          "title": "Django",
+          "description": "test django description",
+          "instructor": "Ayan",
+          "duration": 75,
+          "price": 20000.0
+      }
+        ```
+- http://localhost:8000/api/v1/courses/{course_id} (GET)
+- http://localhost:8000/api/v1/courses/{course_id} (PUT, PATCH)
+    - `Update Course`: Only Admin users can update a course.
         - `Request Body`: 
             ```json
             {
-            "username": "kalam",
-            "password": "123456"
+              "title": "Django",
+              "description": "test django description",
+              "instructor": "Ayan",
+              "duration": 75,
+              "price": 20000.0
             }
             ```
+- http://localhost:8000/api/v1/courses/{course_id} (DELETE)
+    - `Delete Course`: Only Admin users can delete a course.
 
+### Enrollments API
+- http://localhost:8000/api/v1/enrollments (GET)
+    - `Get All Enrollments`: Get all enrollments.
 
+- http://localhost:8000/api/v1/enrollments (POST)
+    - `Create Enrollment`: Only Admin users can create an enrollment. Added validation to check if the course
+exists, the student's name is not empty or contain any special characters.
+        - `Request Body`: 
+            ```json
+            {
+              "course": 1,
+              "student": "kalam"
+            }
+            ```
 

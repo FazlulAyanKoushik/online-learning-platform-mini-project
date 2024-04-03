@@ -1,4 +1,4 @@
-"""Serializer for registration of a new user"""
+"""Serializer for registration of new user"""
 from django.contrib.auth.models import User
 
 from rest_framework import serializers
