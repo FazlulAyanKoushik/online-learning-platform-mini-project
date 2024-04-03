@@ -106,6 +106,7 @@ python manage.py runserver
       }
         ```
 - http://localhost:8000/api/v1/courses/{course_id} (GET)
+    - `Get Course`: Get a course by id.
 - http://localhost:8000/api/v1/courses/{course_id} (PUT, PATCH)
     - `Update Course`: Only Admin users can update a course.
         - `Request Body`: 
@@ -136,6 +137,7 @@ exists, the student's name is not empty or contain any special characters.
             }
             ```
 - http://localhost:8000/api/v1/enrollments/{enrollment_id} (GET)
+    - `Get Enrollment`: Get an enrollment by id.
 - http://localhost:8000/api/v1/enrollments/{enrollment_id} (PUT, PATCH)
     - `Update Enrollment`: update the enrollment.
         - `Request Body`: 
