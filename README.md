@@ -152,5 +152,23 @@ exists, the student's name is not empty or contain any special characters.
     - `Delete Enrollment`: Delete an enrollment by id.
 
 
+### Tests
+To run the tests, run the following command:
+
+Course API tests:
+```bash
+python manage.py test course.rest.tests
+```
+
+Enrollment API tests:
+```bash
+python manage.py test enrollment.rest.tests
+```
+
+### Admin Panel
+- http://localhost:8000/admin
+    - Admin panel can be accessed by superuser. Admin can manage courses, enrollments, and users from the admin panel.
+
+
 
 
