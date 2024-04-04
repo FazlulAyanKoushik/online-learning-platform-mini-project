@@ -37,16 +37,18 @@ source venv/bin/activate
 
 3. Install the project dependencies:
 
-```bash
-pip install -r requirements.txt
-```
-
-### Run the Django migrations:
-
 Navigate to Project root directory and run the following command:
 ```bash
 cd learning_platform
 ```
+
+```bash
+pip install -r requirements.txt
+```
+
+### No need to have any .env file. The project is configured to use the default settings.
+
+### Run the Django migrations:
 
 ```bash
 python manage.py migrate
@@ -169,6 +171,15 @@ python manage.py test enrollment.rest.tests
 - http://localhost:8000/admin
     - Admin panel can be accessed by superuser. Admin can manage courses, enrollments, and users from the admin panel.
 
+### Docker Deployment : Optional
 
+To deploy the application using Docker:
+
+1. Install Docker on your system.
+2. Build and run the Docker containers:
+
+```bash
+docker-compose up --build
+```
 
 
